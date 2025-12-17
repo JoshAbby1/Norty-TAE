@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TAE LM Arena Helper</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <main class="wrap">
+      <header class="header">
+        <h1>TAE LM Arena Helper</h1>
+        <p>Simple steps + a prompt maker you can paste into LM Arena.</p>
+      </header>
+
+      <!-- SIMPLE HOW-TO BOX -->
+      <section class="card">
+        <h2>How to use LM Arena (Beginner)</h2>
+
+        <div class="note">
+          <strong>Important:</strong>
+          <span>If you want images, press <b>Image</b> first before anything else.</span>
+        </div>
+
+        <div class="grid3">
+          <div class="subcard">
+            <h3>Battle</h3>
+            <ol>
+              <li>Open LM Arena and press <b>Image</b>.</li>
+              <li>Click <b>Battle</b>.</li>
+              <li>Paste your prompt.</li>
+              <li>Generate and pick the winner.</li>
+              <li>Change ONE thing and try again.</li>
+            </ol>
+          </div>
+
+          <div class="subcard">
+            <h3>Side by Side</h3>
+            <ol>
+              <li>Open LM Arena and press <b>Image</b>.</li>
+              <li>Click <b>Side by Side</b>.</li>
+              <li>Pick a model on the left and right.</li>
+              <li>Paste your prompt and generate.</li>
+              <li>Compare results and keep the best.</li>
+            </ol>
+          </div>
+
+          <div class="subcard">
+            <h3>Direct Chat</h3>
+            <ol>
+              <li>Open LM Arena and press <b>Image</b> (for images).</li>
+              <li>Click <b>Direct Chat</b>.</li>
+              <li>Paste your prompt.</li>
+              <li>Then say: “change only the outfit / scene / camera / props”.</li>
+            </ol>
+          </div>
+        </div>
+
+        <p class="tip">
+          Best way to learn: change <b>one</b> thing at a time so you can see what actually affects the result.
+        </p>
+      </section>
+
+      <!-- PROMPT MAKER -->
+      <section class="card">
+        <h2>Prompt Maker</h2>
+        <p class="muted">Type it simply — it turns it into a layered prompt (outfit / scene / camera / props).</p>
+
+        <div class="form">
+          <label>
+            What do you want? (simple)
+            <input id="idea" placeholder="e.g. mirror selfie in a lived-in LED bedroom, branded tracksuit" />
+          </label>
+
+          <label>
+            Outfit
+            <input id="outfit" value="branded tracksuit/hoodie + joggers/shorts + trainers (do NOT describe hair/face)" />
+          </label>
+
+          <label>
+            Scene
+            <input id="scene" value="real-life location, natural imperfections, camera-roll vibe" />
+          </label>
+
+          <label>
+            Camera
+            <input id="camera" value="front-camera POV / mirror pic / candid shot, 9:16 vertical, realistic lighting" />
+          </label>
+
+          <label>
+            Props / Details
+            <input id="props" value="phone visible, everyday items, lived-in details, natural mess" />
+          </label>
+
+          <div class="buttons">
+            <button id="generate">Generate Prompt</button>
+            <a class="btn-outline" href="https://lmarena.ai" target="_blank" rel="noreferrer">Go to LM Arena</a>
+          </div>
+
+          <label>
+            Generated prompt
+            <textarea id="output" rows="11" placeholder="Your layered prompt will appear here..." readonly></textarea>
+          </label>
+
+          <p class="tiny">
+            Copy prompt → open LM Arena → press <b>Image</b> → choose Battle / Side by Side / Direct Chat → paste.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
