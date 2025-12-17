@@ -1,0 +1,111 @@
+:root {
+  --bg: #09090b;
+  --card: rgba(24, 24, 27, 0.55);
+  --border: #27272a;
+  --text: #fafafa;
+  --muted: #a1a1aa;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 40px 16px;
+  display: grid;
+  gap: 18px;
+}
+
+.header h1 { margin: 0; font-size: 24px; }
+.header p { margin: 6px 0 0; color: var(--muted); }
+
+.card {
+  border: 1px solid var(--border);
+  background: var(--card);
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.card h2 { margin: 0 0 10px; font-size: 18px; }
+.muted { color: var(--muted); margin-top: 0; }
+
+.note {
+  border: 1px solid var(--border);
+  background: rgba(9,9,11,0.55);
+  border-radius: 14px;
+  padding: 12px;
+  display: grid;
+  gap: 6px;
+  margin: 10px 0 14px;
+  color: #e4e4e7;
+}
+
+.grid3 {
+  display: grid;
+  gap: 12px;
+}
+@media (min-width: 900px) {
+  .grid3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+.subcard {
+  border: 1px solid var(--border);
+  background: rgba(9,9,11,0.45);
+  border-radius: 16px;
+  padding: 14px;
+}
+.subcard h3 { margin: 0 0 10px; font-size: 16px; }
+.subcard ol { margin: 0; padding-left: 18px; color: #e4e4e7; }
+.subcard li { margin: 6px 0; }
+
+.tip { margin: 12px 0 0; color: var(--muted); font-size: 13px; }
+
+.form { display: grid; gap: 12px; margin-top: 12px; }
+label { display: grid; gap: 6px; color: #e4e4e7; font-size: 13px; }
+
+input, textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  background: rgba(9,9,11,0.55);
+  color: var(--text);
+  border-radius: 14px;
+  padding: 10px 12px;
+  outline: none;
+}
+
+.buttons {
+  display: grid;
+  gap: 10px;
+}
+@media (min-width: 700px) {
+  .buttons { grid-template-columns: 1fr 1fr; }
+}
+
+button, .btn-outline {
+  border-radius: 14px;
+  padding: 10px 12px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+  background: #fafafa;
+  color: #09090b;
+}
+
+.btn-outline {
+  border: 1px solid var(--border);
+  background: rgba(9,9,11,0.35);
+  color: var(--text);
+}
+
+.tiny { margin: 0; color: var(--muted); font-size: 12px; }
